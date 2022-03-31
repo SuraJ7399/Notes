@@ -1,0 +1,16 @@
+Worker Process: Whenever an old worker process recycles, a newer one is created, which replaces the old one to serve requests. The configuration settings for the creation and control of the worker process are stored in the root configuration file for the computer, Machine.config.
+Reactive process recycling-----
+Reactive process recycling occurs when a process is misbehaving or unable to serve requests. The process typically displays detectable symptoms, such as deadlocks, access violations, memory leaks, and so on, in order to trigger a process recycle. You can control the conditions that trigger a process restart by using the configuration settings described in the following table.
+
+Setting description 
+requestQueueLimit: Handles deadlock conditions. The DWORD value is set to the maximum allowed number of requests in the queue, after which the worker process is considered to be misbehaving. When the number is exceeded, a new process is launched and the requests are reassigned. The default is 5000 requests.
+memoryLimit: Handles memory leak conditions. The DWORD value is set to the percentage of physical memory that the worker process can consume before it is considered to be misbehaving. When that percentage is exceeded, a new process is launched and the requests are reassigned. The default is 60%.
+shutdownTimeout: Specifies the amount of time the worker process has to shut itself down gracefully (string value in hr:min:sec format). When the time out expires, the ASP.NET ISAPI shuts down the worker process. The default is 00:00:05.
+
+Proactive process recycling
+Proactive process recycling restarts the worker process periodically even if the process is healthy. This can be a useful way to prevent denials of service due to conditions the process model is unable to detect. A process can be restarted after a specific number of requests or after a time-out period has elapsed.
+
+Setting description
+timeout: String value in hr:min:sec format that configures the time limit after which a new worker process will be launched to take the place of the current one. The default is Infinite, a keyword indicating that the process should not be restarted.  
+idleTimeout: String value in hr:min:sec format that configures the amount of inactivity, after which the worker process is automatically shut down. The default is Infinite, a keyword indicating that the process should not be restarted.
+requestLimit: DWORD value set to the number of requests after which a new worker process will be launched to take the place of the current one. The default is Infinite, a keyword indicating that the process should not be restarted.
