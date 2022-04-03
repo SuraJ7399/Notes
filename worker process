@@ -14,3 +14,6 @@ Setting description
 timeout: String value in hr:min:sec format that configures the time limit after which a new worker process will be launched to take the place of the current one. The default is Infinite, a keyword indicating that the process should not be restarted.  
 idleTimeout: String value in hr:min:sec format that configures the amount of inactivity, after which the worker process is automatically shut down. The default is Infinite, a keyword indicating that the process should not be restarted.
 requestLimit: DWORD value set to the number of requests after which a new worker process will be launched to take the place of the current one. The default is Infinite, a keyword indicating that the process should not be restarted.
+
+
+Win32_prodcut:  The Win32_Product class enables you to enumerate the software installed on a computer, provided the software was installed by using the Windows Installer. Warning Win32_Product is not query optimized.
