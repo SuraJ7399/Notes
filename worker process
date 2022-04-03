@@ -17,3 +17,9 @@ requestLimit: DWORD value set to the number of requests after which a new worker
 
 
 Win32_prodcut:  The Win32_Product class enables you to enumerate the software installed on a computer, provided the software was installed by using the Windows Installer. Warning Win32_Product is not query optimized.
+
+
+broadcast receiver:   An Android component which allows you to register for system or application events. All registered receivers for an event are notified by the Android runtime once this event happens.
+
+
+DWORD:  A dword, which is short for "double word," is a data type definition that is specific to Microsoft Windows. When defined in the file windows. h, a dword is an unsigned, 32-bit unit of data. It can contain an integer value in the range 0 through 4,294,967,295.
