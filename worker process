@@ -25,3 +25,5 @@ broadcast receiver:   An Android component which allows you to register for syst
 DWORD:  A dword, which is short for "double word," is a data type definition that is specific to Microsoft Windows. When defined in the file windows. h, a dword is an unsigned, 32-bit unit of data. It can contain an integer value in the range 0 through 4,294,967,295.
 
 Shadow Copy (also known as Volume Snapshot Service, Volume Shadow Copy Service or VSS) is a technology included in Microsoft Windows that can create backup copies or snapshots of computer files or volumes, even when they are in use.
+
+Plug and Play (PnP) : It is the part of Windows that enables a computer system to adapt to hardware changes with minimal intervention by the user. A user can add and remove devices without having to do manual configuration, and without knowledge of computer hardware
